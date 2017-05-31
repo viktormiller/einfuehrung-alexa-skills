@@ -1,0 +1,26 @@
+{
+  "intents": [
+    {
+      "intent": "NameIntent",
+      "slots": [
+        {
+          "name": "NAME",
+          "type": "AMAZON.DE_FIRST_NAME"
+        },
+        {
+          "name": "AGE",
+          "type": "AMAZON.NUMBER"
+        }
+      ]
+    },
+    {
+      "intent": "AgeIntent",
+      "slots": [
+        {
+          "name": "AGE",
+          "type": "AMAZON.NUMBER"
+        }
+      ]
+    }
+  ]
+}

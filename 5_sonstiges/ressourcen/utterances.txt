@@ -1,0 +1,8 @@
+NameIntent	Mein Name lautet NAME und ich bin AGE Jahre alt
+NameIntent	Mein Name ist NAME und ich bin AGE Jahre alt
+NameIntent	Ich heiﬂe NAME und ich bin AGE Jahre alt
+NameIntent	Mein Name lautet NAME und ich bin AGE
+NameIntent	Mein Name ist NAME und ich bin AGE
+NameIntent	Ich heiﬂe NAME und ich bin AGE
+AgeIntent	Ich bin AGE Jahre alt
+AgeIntent	Ich bin AGE
