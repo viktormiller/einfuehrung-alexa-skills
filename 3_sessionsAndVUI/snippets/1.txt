@@ -1,0 +1,14 @@
+"use strict";
+module.change_code = 1;
+var _ = require("lodash");
+var Skill = require("alexa-app");
+var skillService = new Skill.app("lueckentextbuilder");
+var LueckentextHelper = require("./lueckentext_helper");
+
+skillService.launch(function(request, response) {
+  var prompt = "Willkommen zu Lückentext. "
+    + "Um einen neuen Lückentext zu erstellen, sage erstelle einen Lückentext. ";
+  response.say(prompt).shouldEndSession(false);
+});
+
+module.exports = skillService;

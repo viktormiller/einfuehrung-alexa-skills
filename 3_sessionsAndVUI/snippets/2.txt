@@ -1,0 +1,19 @@
+[…]
+skillService.launch(function(request, response) {
+  var prompt = "Willkommen zu Lückentext. "
+    + "Um einen neuen Lückentext zu erstellen, sage erstelle einen Lückentext. "; response.say(prompt).shouldEndSession(false);
+});
+
+skillService.intent("AMAZON.HelpIntent", {},
+  function(request, response) {
+    var lueckentextHelper = getLueckentextHelper(request);
+    var help = "Willkommen zu Lückentext. "
+      + "Um einen neuen Lückentext zu erstellen, sage erstelle einen Lückentext. "
+      + "Du kannst auch stopp oder abbrechen sagen um den Skill zu beenden.";
+    if (lueckentextHelper.started) {
+      help = lueckentextHelper.getStep().help;
+    }
+    response.say(help).shouldEndSession(false);
+  });
+
+module.exports = skillService;

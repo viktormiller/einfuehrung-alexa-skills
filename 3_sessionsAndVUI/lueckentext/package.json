@@ -1,0 +1,12 @@
+{
+  "name": "lueckentextbuilder",
+  "version": "1.0.0",
+  "description": "liest lueckentext vor!",
+  "main": "index.js",
+  "author": "josh skeen, viktor miller",
+  "license": "ISC",
+  "dependencies": {
+    "alexa-app": "^2.3.2",
+    "lodash": "^4.3.0"
+  }
+}

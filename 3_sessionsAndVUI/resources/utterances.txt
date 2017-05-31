@@ -1,0 +1,16 @@
+lueckentextIntent neuer Lückentext
+lueckentextIntent starte Lückentext
+lueckentextIntent erstelle Lückentext
+lueckentextIntent beginne Lückentext
+lueckentextIntent baue Lückentext
+lueckentextIntent neuer einen Lückentext
+lueckentextIntent starte einen Lückentext
+lueckentextIntent erstelle einen Lückentext
+lueckentextIntent beginne einen Lückentext
+lueckentextIntent baue einen Lückentext
+lueckentextIntent neuer den Lückentext
+lueckentextIntent starte den Lückentext
+lueckentextIntent erstelle den Lückentext
+lueckentextIntent beginne den Lückentext
+lueckentextIntent baue den Lückentext
+lueckentextIntent {STEPVALUE}

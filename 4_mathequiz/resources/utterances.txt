@@ -1,0 +1,5 @@
+mathequizIntent	neu
+mathequizIntent	start
+mathequizIntent	los
+mathequizIntent	anfangen
+mathequizIntent	{STEPVALUE}

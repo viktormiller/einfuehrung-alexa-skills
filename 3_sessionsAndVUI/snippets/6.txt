@@ -1,0 +1,12 @@
+[…]
+var LueckentextHelper = require("./lueckentext_helper");
+var LUECKENTEXT_BUILDER_SESSION_KEY = "lueckentext_builder";
+var getLueckentextHelper = function(request) {
+  var lueckentextHelperData = request.session(LUECKENTEXT_BUILDER_SESSION_KEY);
+  if (lueckentextHelperData === undefined) {
+    lueckentextHelperData = {};
+  }
+  return new LueckentextHelper(lueckentextHelperData);
+};
+var cancelIntentFunction = function(request, response) {
+[…]

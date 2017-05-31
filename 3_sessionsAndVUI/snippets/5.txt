@@ -1,0 +1,20 @@
+[…]
+function(request, response) {
+    //Lückentext Funktionalität!
+    var stepValue = request.slot("STEPVALUE");
+    var lueckentextHelper = new LueckentextHelper();
+    lueckentextHelper.started = true;
+    if (stepValue !== undefined) {
+      lueckentextHelper.getStep().value = stepValue;
+    }
+    if (lueckentextHelper.completed()) {
+      var completedLueckentext = lueckentextHelper.buildLueckentext();
+      response.card(lueckentextHelper.currentLueckentext().title, completedLueckentext);
+      response.say("Der Lückentext ist fertig! Ich lese ihn dir jetzt vor. " + completedLueckentext);
+      response.shouldEndSession(true);
+    } else {
+      response.say("Nenne mir " + lueckentextHelper.getPrompt());
+      response.reprompt("Ich habe leider nichts gehört. Nenne mir " + lueckentextHelper.getPrompt() + " um fortzufahren.");
+      response.shouldEndSession(false);
+    }
+[…]

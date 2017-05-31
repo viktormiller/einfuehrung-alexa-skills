@@ -1,0 +1,22 @@
+{
+  "intents": [
+    {
+      "intent": "AMAZON.CancelIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "slots": [
+        {
+          "name": "STEPVALUE",
+          "type": "STEPVALUES"
+        }
+      ],
+      "intent": "lueckentextIntent"
+    }
+  ]
+}

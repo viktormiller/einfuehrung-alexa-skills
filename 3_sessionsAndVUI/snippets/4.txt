@@ -1,0 +1,17 @@
+[…]
+skillService.intent("AMAZON.HelpIntent", {},
+  function(request, response) {
+  …
+});
+
+skillService.intent("lueckentextIntent", {
+  "slots": {
+    "STEPVALUE": "STEPVALUES"
+  },
+  "utterances": ["{neuer|starte|erstelle|beginne|baue} {|einen|den} Lückentext", "{-|STEPVALUE}"]
+},
+  function(request, response) {
+    //Lückentext Funktionalität!
+  }
+);
+module.exports = skillService;

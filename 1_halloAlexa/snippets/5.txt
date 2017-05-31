@@ -1,0 +1,8 @@
+'use strict';
+var APP_ID = amzn1.ask.skill.171eac45-d1d6-40cc-bb06-8f4c1bba8554;
+var AlexaSkill = require('./AlexaSkill');
+
+var GreeterService = function() {
+  AlexaSkill.call(this, APP_ID);
+};
+[…]

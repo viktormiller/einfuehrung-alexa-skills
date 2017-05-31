@@ -1,0 +1,12 @@
+{
+  "name": "mathequiz",
+  "version": "1.0.0",
+  "description": "math exercises!",
+  "main": "index.js",
+  "author": "viktor miller",
+  "license": "ISC",
+  "dependencies": {
+    "alexa-app": "^2.3.2",
+    "lodash": "^4.3.0"
+  }
+}
