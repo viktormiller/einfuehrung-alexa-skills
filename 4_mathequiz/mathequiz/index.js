@@ -31,6 +31,8 @@ skillService.intent("AMAZON.StopIntent", {}, cancelIntentFunction);
 
 /* LaunchRequest */
 skillService.launch(function(request, response) {
+  var globalCorrect = 0;
+  var globalTotal = 0;
   var prompt = "Willkommen zum Mathequiz, "
     + "um zu beginnen, sage los.";
   response.say(prompt).shouldEndSession(false);
@@ -70,9 +72,9 @@ skillService.intent("mathequizIntent", {
       //check if respnse is correct
       result = mathequizHelper.getStep().result;
       if(result == stepValue){
-        response.say(stepValue +" ist richtig.");
         correct++;
         globalCorrect++;
+        response.say(stepValue +" ist richtig.");
       }
       else{
         response.say(stepValue +' ist falsch. Die korrekte Lösung ist '+ result +' <break time="1s"/>.');
@@ -81,6 +83,8 @@ skillService.intent("mathequizIntent", {
     if (mathequizHelper.completed()) {
       var completedMathequiz = mathequizHelper.buildMathequiz();
       response.card(mathequizHelper.currentMathequiz().title, completedMathequiz);
+      mathequizHelper.currentStep++;
+      globalTotal = mathequizHelper.currentStep;
       response.say("Das Mathequiz ist vorbei! Du hast "+correct+" von "+globalTotal+" Aufgaben gelöst." + completedMathequiz);
       response.shouldEndSession(true);
     } else {
